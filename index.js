@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 //definir un dominio(s)
-const whiteList = [process.env.FRONTEND_URL];
+const whiteList = [process.env.FRONTEND_URL || process.env.FRONTEND_URL_APP];
 const corsOptions = {
     origin: (origin, callback) => {
         //revisar que las peticiones vengan de un servidor que esta en whiteList
